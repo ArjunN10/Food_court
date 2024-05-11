@@ -2,7 +2,7 @@ import axios from "axios"
 
 
 export const Axios= axios.create({
-    baseURL: process.env.REACT_BASE_URL || "http://localhost:3002/",
+    baseURL: process.env.REACT_BASE_URL || "https://food-court-1.onrender.com/",
     headers: {
       "Content-Type":"application/json",
     }
