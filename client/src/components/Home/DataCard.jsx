@@ -3,6 +3,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaPhoneVolume } from "react-icons/fa6";
 
 export default function DataCard() {
     return (
@@ -10,8 +12,16 @@ export default function DataCard() {
 
         <div className="w-full md:w-[20%]  h-32 hover:scale-105 transition-all duration-500  border border-stone-400 rounded-xl flex flex-col  gap-2  items-center">\
         <h1 className="text-blue-400">CONNECT WITH US </h1>
-        <h1 className="text-stone-400 text-[10px] font-thin"> +1 80536725 </h1> 
-        <h1 className="text-stone-400 text-[10px] font-thin"> email@42brandgrill.com </h1> 
+        <h1 className="text-stone-400 text-[10px] font-thin flex gap-1 ">
+        <span className="mt-1">
+          <FaPhoneVolume/>
+          </span>
+           +1 80536725 </h1> 
+        <h1 className="text-stone-400 text-[10px] font-thin flex gap-1"> 
+        <span className="mt-1">
+          <MdOutlineEmail/>
+          </span>
+        email@42brandgrill.com </h1> 
         </div>
         <div className="w-full md:w-[20%] h-32 hover:scale-105 transition-all duration-500   gap-3  relative  border border-stone-400 rounded-xl justify-center flex flex-col items-center">
         <img
