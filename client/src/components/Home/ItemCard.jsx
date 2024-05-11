@@ -4,26 +4,26 @@ import cardBackgroundImage from "../../assets/images/bg.png";
 export default function ItemCard({ items, title,image1,image2 ,top}) {
   return (
     <>
-      <div className="relative p-20 bg-black">
-        <div className="relative mt-16 mb-16 mx-10 border border-white  rounded-lg shadow-lg " style={{backgroundImage:`url(${cardBackgroundImage})`}}>
-          <div className={`w-40 h-40  absolute  ${top?"top-[-40px]":"bottom-0"} right-[-40px]`}><img className="w-full h-full object-contain" src={image1} alt=""/></div>
-          <div className="w-40 h-40  absolute  top-[-60px] left-[-60px]"><img className="w-full h-full object-cover" src={image2} alt=""/></div>
+      <div className="relative px-0 md:px-20 py-3 bg-black overflow-hidden">
+        <div className="relative  md:mx-10 mx-3 border border-white  rounded-lg shadow-lg  " style={{backgroundImage:`url(${cardBackgroundImage})`}}>
+          <div className={` md:w-40 w-20 md:h-40 h-20  absolute   ${top?"md:top-[-40px] top-[-20px]":"md:bottom-[-20px] bottom-0"} right-[-10px]`}><img className="w-full h-full object-contain" src={image1} alt=""/></div>
+          <div className=" md:w-40 w-20 md:h-40 h-20   absolute  md:top-[-40px] top-[-20px] md:left-[-40px] left-[-20px]" ><img className="w-full h-full object-cover" src={image2} alt=""/></div>
          <div className="w-full  h-fit flex justify-center items-center gap-5 p-1 relative">
-          <div className="text-white w-32 h-1 bg-white "></div>
+          <div className="text-[#544C4C] w-32 h-1 bg-[#544C4C] "></div>
 
           <h2 className="text-[60px] font-bold text-center my-16 text-white"
           style={{ fontWeight: 'bold', fontSize: '653 bg-white', textShadow: '4px 3px #800020' }}>
             {title}
           </h2>
-<div className="text-white w-32 h-1 bg-white "></div>
+<div className="text-[#544C4C] w-32 h-1 bg-[#544C4C] "></div>
             </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-10 pb-10">
                   {items.map((category) => (
                       <div key={category._id}>
                       <div className="flex justify-between items-center py-2 px-4 rounded-md">
               <p className="text-lg font-medium text-white">
                 {category.name}
-                {Array(Math.max(0, 100 - category.name.length)).fill(".").join("")}
+                {Array(Math.max(0, 10 - category.name.length)).fill(".").join("")}
               </p>
               <p className="text-lg font-medium text-white">
                 ${category.price}

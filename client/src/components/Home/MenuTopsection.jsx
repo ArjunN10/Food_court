@@ -26,8 +26,8 @@ export default function MenuTopSection() {
           </div>
         </div>
       </div>
-      <div className="relative">
-<div className="absolute w-full h-full  flex justify-center items-center text-white gap-3">
+      <div className="relative h-[60px] flex justify-center items-center">
+<div className="absolute w-full h-fit  flex justify-center items-center text-white gap-3">
   <CostomButton content={"FOOD"}/>
   <CostomButton content={"DRINKS"}/>
   <CostomButton content={"BRUNCH"}/>
@@ -35,7 +35,7 @@ export default function MenuTopSection() {
       <img
         src={menuImage}
         alt="Menu"
-        className="w-full h-auto md:h-[79] object-contain object-center md:object-left"
+        className="w-full h-full  object-cover "
         / >
        </div>
    </div>

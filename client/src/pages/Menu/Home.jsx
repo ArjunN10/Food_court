@@ -11,6 +11,9 @@ import jar from "../../assets/images/jar.png";
 import cup from "../../assets/images/cup1.png";
 import cocktail from "../../assets/images/cocktail.png";
 import cocktail2 from "../../assets/images/cocktail2.png";
+import FlavorCard from '../../components/Home/FlavorCard';
+import DataCard from '../../components/Home/DataCard';
+import CostomButton from '../../components/Buttun';
 
 const value=["ORANGE MINT","BLUE MIST","MIGHTY FREEZE","LUV 66","PEACH","WATERMELON"]
 export default function Home() {
@@ -43,13 +46,14 @@ export default function Home() {
     <div className="w-screen  h-screen">
         <Navbar/>
         <MenuTopSection/>
-        <div className='w-full  h-fit'>
+        <div className='w-full  h-fit pt-10 bg-black flex  flex-col gap-8'>
 
         <ItemCard items={drinksItems} title="DRINKS" image1={jar} image2={cup} top={true}/>
         <ItemCard items={branchItems} title="BRANCH COCKTAILS" image1={cocktail2} image2={cocktail} top={false}/>
-        {/* <ItemCard items={flavors} title="BRANCH COCKTAILS"/> */}
-        </div>
+        <FlavorCard item={flavors}/>
+        <DataCard/>
         <Footer/>
+        </div>
     </div>
   )
 }
