@@ -1,3 +1,4 @@
+import CostomButton from "../Buttun";
 import bgImage from "../../assets/images/Rectangle 103.png";
 import menuImage from "../../assets/images/Rectangle 107.png";
 
@@ -25,11 +26,18 @@ export default function MenuTopSection() {
           </div>
         </div>
       </div>
+      <div className="relative">
+<div className="absolute w-full h-full  flex justify-center items-center text-white gap-3">
+  <CostomButton content={"FOOD"}/>
+  <CostomButton content={"DRINKS"}/>
+  <CostomButton content={"BRUNCH"}/>
+</div>
       <img
         src={menuImage}
         alt="Menu"
-        className="w-full h-auto md:h-[79] object-cover object-center md:object-left"
-      />
-    </div>
+        className="w-full h-auto md:h-[79] object-contain object-center md:object-left"
+        / >
+       </div>
+   </div>
   );
 }

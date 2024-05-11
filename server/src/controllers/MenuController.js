@@ -1,7 +1,7 @@
 const MenuCategory =require("../models/MenuCategory")
 const MenuItem=require("../models/MenuItem")
 
-const AddItems=async (req, res) => {
+const AddItems=async (req, res) => { 
         try {
             const { Name,category,price, itemNames } = req.body;
     

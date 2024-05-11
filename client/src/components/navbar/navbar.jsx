@@ -4,7 +4,7 @@ import logoicon from "../../assets/images/Logo.png"
 
 const navigation = [
   { name: 'HOME', href: '#', current: false },
-  { name: 'MENU', href: '#', current: false },
+  { name: 'MENU', href: '/', current: false },
   { name: 'MAKE A RESERVATION', href: '#', current: false },
   { name: 'CONTACT US', href: '#', current: false },
 ]
@@ -16,17 +16,22 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-[#121618]">
-        {/* Image icon */}
+    <Disclosure as="nav" className="bg-[#121618] " style={{position:"relative"}}>
       {({ open }) => (
         <>
-          <div className=" flex justify-end max-w-7xl px-2 sm:px-6 lg:px-8 mx-10">
-        {/* <img src={logoicon} alt="Navbar Icon" 
-        className="absolute bottom-0 left-0 transform translate-y-4 -translate-x-4 h-8 w-8" /> */}
+        <div className='absolute bottom-[-10px] z-50 left-10 w-fit flex '>
+
         <img
-              src={logoicon}
-              alt="Navbar Icon"
-              className="absolute bottom-0 left-0 transform translate-y-4 -translate-x-4 md:translate-y-0 md:left-auto md:right-0 h-8 w-8" />
+                src={logoicon}
+                alt="Navbar Icon"
+                className="   h-14 w-1h-14" />
+                <div className='flex text-xl flex-col justify-between'>
+                  <h1 className='text-blue-400'>DEEP <span className='text-white'>NET</span></h1>
+                  <h1 className='text-stone-100 text-opacity-40'>SOFT</h1>
+                </div>
+        
+                </div>
+          <div className=" flex justify-end max-w-7xl  px-2 sm:px-6 lg:px-8 mx-10">
 
 
             <div className="relative flex h-20 items-end justify-between ">
